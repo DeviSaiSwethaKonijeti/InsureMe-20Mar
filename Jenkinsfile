@@ -16,7 +16,7 @@ pipeline {
                   }
 
 
-  stage('Create a Package') {
+          stage(generating HTML reports) {
             steps {
                  publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: '/var/lib/jenkins/workspace/Insurance project/target/surefire-reports', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: '', useWrapperFileDirectly: true])
 
