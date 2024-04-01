@@ -31,14 +31,14 @@ pipeline {
             stage('Login to Dockerhub') {
                  steps {
                    withCredentials([usernamePassword(credentialsId: 'a3295102-7f5f-4778-a899-516a317def2d', passwordVariable: 'paswd', usernameVariable: 'user')]) {
-                        sh 'sudo docker login -u ${user} -p ${paswd}'
+                        sh 'docker login -u ${user} -p ${paswd}'
                                             }
                                       
                              }
                          }
             stage('pushing the image') {
                  steps {
-                    sh 'sudo docker push devisaiswetha/insure-me:1.0'
+                    sh 'docker push devisaiswetha/insure-me:1.0'
                     }
             }
             
