@@ -22,7 +22,12 @@ pipeline {
 
                              }
                   }
-
+            stage('Create a Docker image from the Package Insure-Me.jar file') {
+      steps {
+        sh 'docker build -t devisaiswetha/insure-me:1.0 .'
+                    }
+            }
+                             
 
        
      }
