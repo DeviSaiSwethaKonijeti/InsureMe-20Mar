@@ -39,6 +39,13 @@ pipeline {
                     sh 'docker push devisaiswetha/insure-me:1.0'
                     }
             }
+
+         stage('Ansbile config and Deployment') {
+               steps {
+                 ansiblePlaybook credentialsId: 'a7830bea-a7cb-40a3-875d-b0dc9d406014', disableHostKeyChecking: true, installation: 'ansible', inventory: '/etc/ansible/hosts', playbook: 'ansible.yml', vaultTmpPath: '
+       
+                               }
+            }
             
             
 
