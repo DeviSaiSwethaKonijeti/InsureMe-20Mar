@@ -40,7 +40,7 @@ pipeline {
                          }
             stage('pushing the image') {
                  steps {
-                    sh 'docker push devisaiswetha/insure-me:1.0'
+                    sh 'sudo docker push devisaiswetha/insure-me:1.0'
                     }
             }
             
