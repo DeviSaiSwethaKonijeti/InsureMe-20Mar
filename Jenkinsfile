@@ -35,7 +35,7 @@ pipeline {
                                       }
                              }
                          }
-            stage('Create a Docker image from the Package Insure-Me.jar file') {
+            stage('pushing the image') {
                  steps {
                     sh 'docker push devisaiswetha/insure-me:1.0'
                     }
