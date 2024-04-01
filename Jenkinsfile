@@ -23,10 +23,23 @@ pipeline {
                              }
                   }
             stage('Create a Docker image from the Package Insure-Me.jar file') {
-      steps {
-        sh 'docker build -t devisaiswetha/insure-me:1.0 .'
+                 steps {
+                    sh 'docker build -t devisaiswetha/insure-me:1.0 .'
                     }
             }
+       
+            stage('Login to Dockerhub') {
+                 steps {
+                  withCredentials([usernamePassword(credentialsId: 'a3295102-7f5f-4778-a899-516a317def2d', passwordVariable: 'password', usernameVariable: 'username')]) {
+                   sh 'docker login -u ${username} -p {password} 
+                                                    }
+                         }
+            }
+
+
+
+
+       
                              
 
        
