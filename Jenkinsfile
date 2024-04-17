@@ -42,7 +42,7 @@ pipeline {
 
          stage('Ansbile config and Deployment') {
                steps {
-                 ansiblePlaybook credentialsId: 'swetha-ssh2', disableHostKeyChecking: true, installation: 'ansible', inventory: '/etc/ansible/hosts', playbook: 'ansible.yml', vaultTmpPath: ''
+                 ansiblePlaybook credentialsId: 'a7830bea-a7cb-40a3-875d-b0dc9d406014', disableHostKeyChecking: true, installation: 'ansible', inventory: '/etc/ansible/hosts', playbook: 'ansible.yml', vaultTmpPath: ''
        
                                }
             }
